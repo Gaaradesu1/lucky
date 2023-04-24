@@ -1,0 +1,20 @@
+name: Test
+on:
+  create:
+    branches:
+      - 'main'
+
+permissions:
+  contents: read
+
+jobs:
+  test-job1111:
+    name: my-test-job
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Display github actions info
+      run: |
+        echo $GITHUB_REF
+        echo $GITHUB_JOB
+        echo $GITHUB_WORKFLOW
